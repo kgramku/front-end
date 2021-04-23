@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import HomeView from "views/HomeView";
-import AboutView from "views/AboutView";
+import MakePost from "views/MakePost";
 
 function AppRoutes({ children }) {
 	return (
@@ -9,7 +9,7 @@ function AppRoutes({ children }) {
 			{children}
 			<Switch>
 				<Route path="/" exact component={HomeView} />
-				<Route path="/about" component={AboutView} />
+				<Route path="/post" component={MakePost} />
 			</Switch>
 		</BrowserRouter>
 	);
