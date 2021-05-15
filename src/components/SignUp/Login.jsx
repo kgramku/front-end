@@ -144,7 +144,7 @@ const Login = () => {
           </div>
           <span className="form-signup">
             Do not have an account? Create an account
-            <BoldLink href="#">SignUP</BoldLink>
+            <BoldLink href="./signup">SignUP</BoldLink>
           </span>
         </FormWrapper>
       </div>

@@ -48,6 +48,9 @@ const BottomFeed = styled.div`
 
   .optional {
     cursor: pointer;
+    input {
+      display: none;
+    }
   }
 
   :hover {
@@ -104,8 +107,11 @@ const Feed = () => {
       </HeaderFeed>
       <BottomFeed>
         <div className="optional">
-          <ImageWrapper src={Photo} alt="photo" />
-          Photo/Video
+          <label>
+            <input type="file" />
+            <ImageWrapper src={Photo} alt="photo" />
+            Photo/Video
+          </label>
         </div>
       </BottomFeed>
     </FeedWrapper>

@@ -177,7 +177,7 @@ const SignUp = (ForSubmitForm) => {
             <button variant="btn btn-success" onClick={() => "/Login"}>
               LogIn
             </button> */}
-            Already have an account? <BoldLink href="#">LogIn</BoldLink>
+            Already have an account? <BoldLink href="./login">LogIn</BoldLink>
             {/* Already have an account? LogIn <a href="#">here</a> */}
           </span>
         </FormWrapper>
