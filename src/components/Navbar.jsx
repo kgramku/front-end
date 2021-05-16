@@ -43,11 +43,13 @@ const NavListWrapper = styled.ul`
 
 const Searchbar = styled.div`
   display: flex;
+  gap: 30px;
   font-size: 22px;
-  margin: 30px;
+  margin: 20px;
 
   input {
     padding: 5px;
+
     outline-width: 0;
     border-radius: 999px;
     background-color: white;
@@ -56,6 +58,12 @@ const Searchbar = styled.div`
 `;
 
 const Navbar = () => {
+  // const history = useHistory("");
+
+  // const logout = () => {
+  //   history.push("/signup");
+  // };
+
   return (
     <NavbarWrapper>
       <div className="logo">
@@ -63,7 +71,7 @@ const Navbar = () => {
       </div>
       <Searchbar>
         <div className="search">
-          <input type="text" placeholder="Search" />
+          <input type="text" placeholder="Search bar" />
         </div>
       </Searchbar>
       <div className="links">
@@ -84,7 +92,10 @@ const Navbar = () => {
             <Link to="/signup">Sign Up</Link>
           </li>
           <li>
-            <Link to="/logout">Profile</Link>
+            <Link to="/account">Account</Link>
+          </li>
+          <li>
+            <Link to="/logout">LogOut</Link>
           </li>
         </NavListWrapper>
       </div>

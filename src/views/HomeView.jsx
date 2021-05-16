@@ -34,6 +34,12 @@ const HomeView = () => {
           username="Jenny Tmg"
           image="https://image.freepik.com/free-vector/young-woman-with-face-mask-sick-coronavirus-covid-19_24877-62819.jpg"
         />
+        <Post
+          profilePic="https://media.istockphoto.com/vectors/woman-in-a-surgical-mask-vector-id1212979124?s=612x612"
+          message="This is to inform that the online class is further halted till May 21, 2021"
+          // timestamp="This is timestamp"
+          username="Diya Manandhar"
+        />
       </div>
     </HomeWraapper>
   );

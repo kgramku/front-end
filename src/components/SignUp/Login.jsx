@@ -19,8 +19,9 @@ const LoginHeader = styled.div`
   .Login {
     width: 100%;
     margin-top: 20px;
-    max-width: 450px;
+    max-width: 280px;
     border: 2px solid lightgrey;
+    border-radius: 15px;
     padding: 30px;
   }
 `;
@@ -39,10 +40,12 @@ const FormWrapper = styled.div`
   }
 `;
 const BoldLink = styled.a`
+  padding-left: 10px;
   margin-top: 50px;
   font-size: 22px;
   font-weight: bolder;
-  text-decoration: none;
+  color: #545a8f;
+  text-decoration: underline;
 `;
 const FormItem = styled.div`
   width: 100%;

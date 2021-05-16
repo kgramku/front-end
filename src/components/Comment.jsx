@@ -25,6 +25,7 @@ const CommentSection = styled.div`
     border-radius: 999px;
     background-color: #eeecec;
     width: 550px;
+    height: 20px;
   }
 
   button {

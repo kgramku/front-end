@@ -70,7 +70,6 @@ const Image = styled.img`
 
 const Feed = () => {
   const [input, setInput] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -78,7 +77,6 @@ const Feed = () => {
     // db
 
     setInput("");
-    setImageUrl("");
   };
 
   return (
@@ -92,12 +90,6 @@ const Feed = () => {
               onChange={(e) => setInput(e.target.value)}
               className="feed_input"
               placeholder="What is on your mind?"
-            />
-            <input
-              value={imageUrl}
-              onChange={(e) => setImageUrl(e.target.value)}
-              className="feed_image"
-              placeholder="Image URL (Optional)"
             />
             <button onClick={handleSubmit} type="btnSubmit">
               Hidden submit

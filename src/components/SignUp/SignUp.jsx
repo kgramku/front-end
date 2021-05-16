@@ -33,8 +33,9 @@ const SignUpWrapper = styled.div`
 
   .signup {
     width: 100%;
-    max-width: 450px;
+    max-width: 280px;
     border: 2px solid lightgrey;
+    border-radius: 15px;
     padding: 30px;
   }
 `;
@@ -47,7 +48,11 @@ const SignUpFormHeader = styled.div`
 
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   align-items: center;
+
+  .style {
+  }
 `;
 const FormItem = styled.div`
   width: 100%;
@@ -87,7 +92,7 @@ const BoldLink = styled.a`
   font-size: 22px;
   color: #545a8f;
   font-weight: bolder;
-  text-decoration: none;
+  text-decoration: underline;
 `;
 
 const SignUp = (ForSubmitForm) => {
@@ -129,7 +134,9 @@ const SignUp = (ForSubmitForm) => {
     <SignUpWrapper>
       <div className="signup">
         <SignUpFormHeader>
+          <p className="style">Welcome to KGram</p>
           <p>Create your account by filling out the information below. </p>
+
           <ImageWrapper src={Logo} alt="Logo" />
         </SignUpFormHeader>
         <FormWrapper onSubmit={handleSubmit}>
