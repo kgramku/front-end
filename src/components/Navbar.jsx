@@ -1,6 +1,8 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "./../images/logo.jpg";
+import Dropdown from "./Dropdown";
 
 const NavbarWrapper = styled.nav`
   margin: 0;
@@ -15,6 +17,10 @@ const NavbarWrapper = styled.nav`
   box-sizing: border-box;
 
   box-shadow: 0px 2px 6px lightgrey;
+
+  /* @media screen and (max-width: 768px) {
+    display: none;
+  } */
 
   .logo {
     height: 100%;
@@ -31,6 +37,9 @@ const NavListWrapper = styled.ul`
   gap: 30px;
   font-size: 24px;
 
+  /* @media screen and (max-width: 768px) {
+    display: flex;
+  } */
   li {
     list-style: none;
 
@@ -63,6 +72,19 @@ const Navbar = () => {
   // const logout = () => {
   //   history.push("/signup");
   // };
+  const [dropdown, setDropdown] = useState(false);
+
+  const onClick = (e) => {
+    e.preventDefault();
+    setDropdown(!dropdown);
+  };
+  // const onDoubleClick = () => {
+  //   if (window.innerWidth < 960) {
+  //     setDropdown(false);
+  //   } else {
+  //     setDropdown(false);
+  //   }
+  // };
 
   return (
     <NavbarWrapper>
@@ -91,12 +113,17 @@ const Navbar = () => {
           <li>
             <Link to="/signup">Sign Up</Link>
           </li>
+
           <li>
-            <Link to="/account">Account</Link>
+            <Link onClick={onClick} to="/account">
+              Account
+            </Link>
+
+            {dropdown && <Dropdown />}
           </li>
-          <li>
+          {/* <li>
             <Link to="/logout">LogOut</Link>
-          </li>
+          </li> */}
         </NavListWrapper>
       </div>
     </NavbarWrapper>
