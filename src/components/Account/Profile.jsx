@@ -10,14 +10,15 @@ const ProfileWrapper = styled.div`
   max-width: 700px;
   margin: 0 auto;
 
-  background-color: #bebebe;
+  background-color: #35a797;
   border-radius: 15px;
-  box-shadow: 0px 5px 7px lightgray;
+  box-shadow: 0px 5px 7px #b3fadb;
 
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   gap: 30px;
+  margin-top: 10px;
 `;
 const ProfileImage = styled.div`
   flex: 1 1 120px;
@@ -49,9 +50,9 @@ const PostInfo = styled.div`
   max-width: 700px;
   margin: 0 auto;
 
-  background-color: #bebebe;
+  background-color: #35a797;
   border-radius: 15px;
-  box-shadow: 0px 5px 7px lightgray;
+  box-shadow: 0px 5px 7px #b3fadb;
   h3 {
     text-align: center;
     padding: 10px 0;
@@ -62,10 +63,10 @@ const Photos = styled.div`
   width: 100%;
   margin: 10px 0;
 
-  background-color: #d3d0d0;
+  background-color: #6ec6ba;
   border-radius: 15px;
   padding: 15px 0;
-  box-shadow: 0px 5px 7px lightgray;
+  box-shadow: 0px 5px 7px #b3fadb;
 
   display: flex;
   flex-direction: column;

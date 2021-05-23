@@ -9,9 +9,9 @@ const FeedWrapper = styled.div`
   margin: auto;
   margin-top: 20px;
   flex-direction: column;
-  background-color: #d3d0d0;
+  background-color: #6ec6ba;
   border-radius: 15px;
-  box-shadow: 0px 5px 7px lightgray;
+  box-shadow: 0px 5px 7px #b3fadb;
   width: 100%;
   height: 100px;
 `;
@@ -32,7 +32,7 @@ const HeaderFeed = styled.div`
     padding: 5px 20px;
     margin: 0 15px;
     border-radius: 999px;
-    background-color: #eeecec;
+    background-color: #9de4da;
   }
   .feed_input {
     width: 500px;
@@ -54,7 +54,7 @@ const BottomFeed = styled.div`
   }
 
   :hover {
-    background-color: whitesmoke;
+    background-color: #9de4da;
     border-radius: 15px;
   }
 `;

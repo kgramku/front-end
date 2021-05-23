@@ -12,7 +12,7 @@ const NavbarWrapper = styled.nav`
 
   display: flex;
   flex-direction: row;
-  background-color: #545a8f;
+  background-color: teal;
   justify-content: space-between;
   box-sizing: border-box;
 

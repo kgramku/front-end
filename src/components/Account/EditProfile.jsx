@@ -6,9 +6,9 @@ const FormWrapper = styled.div`
   max-width: 700px;
   margin: 20px auto;
 
-  background: lightgrey;
+  background: #6ec6ba;
   border-radius: 15px;
-  border: box-sizing;
+  /* border: box-sizing; */
 
   .EditProfile {
     margin: 0 250px;
@@ -19,14 +19,18 @@ const FormWrapper = styled.div`
     margin: 10px;
   }
 
+  label {
+    margin-top: 10px;
+  }
   input {
-    margin-top: 5px;
-    box-sizing: border-box;
+    margin: 5px;
+    /* box-sizing: border-box; */
     width: 100%;
+    background: none;
 
     height: 30px;
     border: none;
-    border-bottom: 1px solid #490dd4;
+    border-bottom: 2px solid #9de4da;
 
     &:focus {
       outline: none;
@@ -35,11 +39,11 @@ const FormWrapper = styled.div`
 
   p {
     text-align: center;
-    color: #545a8f;
+    color: teal;
     font-weight: bold;
 
     :hover {
-      background-color: whitesmoke;
+      background-color: #9de4da;
       border-radius: 15px;
     }
   }
@@ -59,7 +63,7 @@ const FormButton = styled.div`
     margin: 10px;
     width: 100%;
     padding: 10px 0;
-    background: #545a8f;
+    background: teal;
     border: none;
     color: white;
 

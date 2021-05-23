@@ -14,9 +14,9 @@ const PostWrapper = styled.div`
   margin: auto;
   margin-top: 20px;
 
-  background-color: #d3d0d0;
+  background-color: #6ec6ba;
   border-radius: 15px;
-  box-shadow: 0 5px 7px lightgrey;
+  box-shadow: 0 5px 7px #b3fadb;
   width: 100%;
   height: 100%;
 `;
@@ -61,7 +61,7 @@ const Img = styled.img`
   padding: 10px 70px;
 
   :hover {
-    background-color: whitesmoke;
+    background-color: #9de4da;
     border-radius: 10px;
   }
 `;
@@ -72,7 +72,7 @@ const Images = styled.img`
   cursor: pointer;
 
   :hover {
-    background: whitesmoke;
+    background: #9de4da;
   }
 `;
 
@@ -99,7 +99,7 @@ const CommentSection = styled.div`
     margin: 0 15px;
     margin: 20px;
     border-radius: 999px;
-    background-color: #eeecec;
+    background-color: #9de4da;
     width: 550px;
     height: 20px;
   }

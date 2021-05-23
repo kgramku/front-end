@@ -8,7 +8,7 @@ const PopupList = styled.div`
   position: absolute;
   right: 0;
   top: 80px;
-  background: #eeecec;
+  background: #9de4da;
   border-radius: 15px;
 
   text-align: start;
@@ -24,7 +24,7 @@ const PopupList = styled.div`
     font-size: 18px;
 
     :hover {
-      background: gray;
+      background: #72a09a;
       cursor: pointer;
     }
   }

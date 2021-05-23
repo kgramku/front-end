@@ -5,14 +5,14 @@ import Validate from "./SignUpValidate";
 
 const FormWrapper = styled.form`
   .error {
-    color: #545a8f;
+    color: #ff4848;
   }
 
   .form-login {
     margin-top: 50px;
     font-weight: bold;
     font-size: 18px;
-    color: #545a8f;
+    color: teal;
     text-align: center;
   }
 `;
@@ -44,7 +44,7 @@ const SignUpFormHeader = styled.div`
   width: 100%;
   font-weight: bold;
   font-size: 20px;
-  color: #545a8f;
+  color: teal;
 
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@ const FormItem = styled.div`
 
     height: 30px;
     border: none;
-    border-bottom: 1px solid #490dd4;
+    border-bottom: 1px solid #6ec6ba;
 
     &:focus {
       outline: none;
@@ -79,7 +79,7 @@ const FormButton = styled.div`
     margin-top: 10px;
     width: 100%;
     padding: 10px 0;
-    background: #545a8f;
+    background: teal;
     border: none;
     color: white;
 
@@ -90,7 +90,7 @@ const FormButton = styled.div`
 const BoldLink = styled.a`
   margin-top: 50px;
   font-size: 22px;
-  color: #545a8f;
+  color: teal;
   font-weight: bolder;
   text-decoration: underline;
 `;

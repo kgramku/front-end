@@ -27,14 +27,14 @@ const LoginHeader = styled.div`
 `;
 const FormWrapper = styled.div`
   .error {
-    color: #545a8f;
+    color: #ff4848;
   }
 
   .form-signup {
     margin-top: 50px;
     font-weight: bold;
     font-size: 18px;
-    color: #545a8f;
+    color: teal;
     text-align: center;
     text-decoration: none;
   }
@@ -44,7 +44,7 @@ const BoldLink = styled.a`
   margin-top: 50px;
   font-size: 22px;
   font-weight: bolder;
-  color: #545a8f;
+  color: teal;
   text-decoration: underline;
 `;
 const FormItem = styled.div`
@@ -58,7 +58,7 @@ const FormItem = styled.div`
 
     height: 30px;
     border: none;
-    border-bottom: 1px solid #490dd4;
+    border-bottom: 1px solid #6ec6ba;
 
     &:focus {
       outline: none;
@@ -73,7 +73,7 @@ const FormButton = styled.div`
     margin-top: 10px;
     width: 100%;
     padding: 10px 0;
-    background: #545a8f;
+    background: teal;
     border: none;
     color: white;
 

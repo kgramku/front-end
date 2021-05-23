@@ -8,7 +8,7 @@ const DropdownList = styled.div`
   position: absolute;
   right: 0;
   top: 80px;
-  background: lightgrey;
+  background: #6ec6ba;
   border-radius: 15px;
 
   text-align: start;
@@ -24,7 +24,7 @@ const DropdownList = styled.div`
     font-size: 18px;
 
     :hover {
-      background: whitesmoke;
+      background: #9de4da;
       cursor: pointer;
     }
   }

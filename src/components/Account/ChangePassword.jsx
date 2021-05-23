@@ -6,22 +6,26 @@ const FormWrapper = styled.div`
   flex-direction: column;
   max-width: 700px;
   margin: 20px auto;
-  border: box-sizing;
+  /* border: box-sizing; */
 
-  background: lightgray;
+  background: #6ec6ba;
   border-radius: 15px;
 
   .changepassword {
     margin: 0 250px;
   }
+  label {
+    margin-top: 10px;
+  }
   input {
     margin-top: 5px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     width: 100%;
+    background: none;
 
     height: 30px;
     border: none;
-    border-bottom: 1px solid #490dd4;
+    border-bottom: 2px solid #9de4da;
 
     &:focus {
       outline: none;
@@ -39,7 +43,7 @@ const FormButton = styled.div`
     margin: 10px;
     width: 100%;
     padding: 10px 0;
-    background: #545a8f;
+    background: teal;
     border: none;
     color: white;
 
