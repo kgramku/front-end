@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Like from "./../images/like.jpg";
 import Comment from "./../images/comment.jpg";
 import Share from "./../images/share.jpg";
-import CommentSection from "components/Comment";
+import ShowButton from "./../images/showbutton.jpg";
+import Popup from "./Popup";
+// import CommentSection from "components/Comment";
 
 const PostWrapper = styled.div`
   display: flex;
@@ -63,8 +65,64 @@ const Img = styled.img`
     border-radius: 10px;
   }
 `;
+const Images = styled.img`
+  margin: 40px 20px 30px 450px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  :hover {
+    background: whitesmoke;
+  }
+`;
+
+const CommentHeader = styled.div`
+  border-top: 2px solid whitesmoke;
+  form {
+    flex: 1;
+    display: flex;
+  }
+`;
+
+// const ImageWrapper = styled.img`
+const ImgWrap = styled.img`
+  display: flex;
+  position: relative;
+  width: 40px;
+  margin: 10px;
+`;
+const CommentSection = styled.div`
+  input {
+    outline-width: 0;
+    border: none;
+    padding: 5px 30px;
+    margin: 0 15px;
+    margin: 20px;
+    border-radius: 999px;
+    background-color: #eeecec;
+    width: 550px;
+    height: 20px;
+  }
+
+  button {
+    display: none;
+  }
+`;
 
 const Post = ({ profilePic, image, username, timestamp, message }) => {
+  const [popup, setPopup] = useState(false);
+  const [comment, setComment] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setComment("");
+  };
+
+  const onClick = (e) => {
+    e.preventDefault();
+    setPopup(!popup);
+  };
   return (
     <PostWrapper>
       <div className="post">
@@ -75,6 +133,8 @@ const Post = ({ profilePic, image, username, timestamp, message }) => {
             <p className="username">{username}</p>
             <p>{timestamp}Timestamp</p>
           </div>
+          <Images src={ShowButton} onClick={onClick} />
+          {popup && <Popup />}
         </PostTopInfo>
         <PostBotton>
           <div className="postbtn">
@@ -97,10 +157,29 @@ const Post = ({ profilePic, image, username, timestamp, message }) => {
         </div>
       </PostOption>
       <div>
-        <CommentSection
+        {/* <CommentSection
           profilePic="https://media.istockphoto.com/vectors/woman-in-a-surgical-mask-vector-id1212979124?s=612x612"
           comment="let's help eachother during this pandemic!!!"
-        />
+        /> */}
+        <CommentHeader>
+          <div className="comment">
+            <form>
+              <ImgWrap src={profilePic} alt="ProfilePic" />
+
+              <CommentSection onSubmit={handleSubmit}>
+                <input
+                  placeholder="Write a comment"
+                  type="text"
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                />
+                <button onClick={handleSubmit} type="btnSubmit">
+                  Hidden submit
+                </button>
+              </CommentSection>
+            </form>
+          </div>
+        </CommentHeader>
       </div>
     </PostWrapper>
   );

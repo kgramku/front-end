@@ -101,9 +101,9 @@ const Navbar = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/post">Post</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/notifications">Notification</Link>
           </li>
@@ -115,9 +115,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link onClick={onClick} to="/account">
-              Account
-            </Link>
+            <Link onClick={onClick}>Account</Link>
 
             {dropdown && <Dropdown />}
           </li>

@@ -15,7 +15,7 @@ function AppRoutes({ children }) {
       {children}
       <Switch>
         <Route path="/" exact component={HomeView} />
-        <Route path="/post" component={MakePost} />
+        {/* <Route path="/post" component={MakePost} /> */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={SignUp} />
         <Route path="/account" component={Account} />

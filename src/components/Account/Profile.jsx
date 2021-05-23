@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Post from "components/Post";
 import Carousel from "react-elastic-carousel";
+import ImageSlider from "components/Account/ImageSlider";
+import { SliderData } from "./../../components/Account/SliderData";
 
 const ProfileWrapper = styled.div`
   width: 100%;
@@ -95,7 +97,12 @@ const PostDetail = styled.div`
 `;
 
 const Profile = ({ username }) => {
-  const breakPoints = [{ width: 700, itemsToShow: 5 }];
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2 },
+    { width: 768, itemsToShow: 3 },
+    { width: 1200, itemsToShow: 4 },
+  ];
 
   return (
     <div className="ProfileHeader">
@@ -131,6 +138,7 @@ const Profile = ({ username }) => {
         <Photos>
           <Carousel breakPoints={breakPoints}>
             <div className="image">
+              {/* <ImageSlider slides={SliderData} /> */}
               <Image
                 src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07"
                 alt="user's added photo"
