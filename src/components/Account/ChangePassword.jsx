@@ -4,12 +4,17 @@ import styled from "styled-components";
 const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 700px;
+  width: 700px;
   margin: 20px auto;
   /* border: box-sizing; */
 
   background: #6ec6ba;
   border-radius: 15px;
+
+  @media only screen and (min-width: 0px) and (max-width: 468px) {
+    width: 100%;
+    height: 100%;
+  }
 
   .changepassword {
     margin: 0 250px;

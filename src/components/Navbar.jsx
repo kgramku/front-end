@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "./../images/logo.jpg";
+import Menu from "./../images/menu.jpg";
 import Dropdown from "./Dropdown";
 
 const NavbarWrapper = styled.nav`
@@ -18,9 +19,10 @@ const NavbarWrapper = styled.nav`
 
   box-shadow: 0px 2px 6px lightgrey;
 
-  /* @media screen and (max-width: 768px) {
-    display: none;
-  } */
+  @media only screen and (min-width: 300px) and (max-width: 600px) {
+    height: 60px;
+    padding: 0px;
+  }
 
   .logo {
     height: 100%;
@@ -37,15 +39,52 @@ const NavListWrapper = styled.ul`
   gap: 30px;
   font-size: 24px;
 
-  /* @media screen and (max-width: 768px) {
-    display: flex;
+  @media only screen and (min-width: 300px) and (max-width: 600px) {
+    gap: 10px;
+    font-size: 15px;
+  }
+
+  /* .menu {
+    display: none;
+
+    image {
+      width: 40px;
+      height: 40px;
+      padding: 20px;
+    }
   } */
+  /* @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.8rem;
+  } */
+
   li {
     list-style: none;
 
     a {
       text-decoration: none;
       color: white;
+    }
+  }
+`;
+const MenuBar = styled.div`
+  .menu {
+    display: flex;
+    @media screen and (max-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 1.8rem;
+    }
+
+    image {
+      width: 40px;
+      height: 40px;
+      padding: 20px;
     }
   }
 `;
@@ -56,6 +95,12 @@ const Searchbar = styled.div`
   font-size: 22px;
   margin: 20px;
 
+  @media only screen and (min-width: 300px) and (max-width: 600px) {
+    gap: 10px;
+    font-size: 12px;
+    margin: 15px 5px 5px;
+  }
+
   input {
     padding: 5px;
 
@@ -63,6 +108,10 @@ const Searchbar = styled.div`
     border-radius: 999px;
     background-color: white;
     box-sizing: border-box;
+
+    @media only screen and (min-width: 300px) and (max-width: 600px) {
+      padding: 1px;
+    }
   }
 `;
 
@@ -73,11 +122,26 @@ const Navbar = () => {
   //   history.push("/signup");
   // };
   const [dropdown, setDropdown] = useState(false);
+  const [button, setButton] = useState(true);
 
   const onClick = (e) => {
     e.preventDefault();
     setDropdown(!dropdown);
+    setButton(button);
   };
+
+  const showButton = () => {
+    if (window.innerWidth < 768) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  // UseEffect(() => {
+  //   showButton();
+  // }, []);
+  window.addEventListener("resize", showButton);
   // const onDoubleClick = () => {
   //   if (window.innerWidth < 960) {
   //     setDropdown(false);
@@ -98,12 +162,14 @@ const Navbar = () => {
       </Searchbar>
       <div className="links">
         <NavListWrapper>
+          {/* <MenuBar>
+            <div className="menu" onclick={onClick}>
+              <image src={Menu} alt="MENU" />
+            </div>
+          </MenuBar> */}
           <li>
             <Link to="/">Home</Link>
           </li>
-          {/* <li>
-            <Link to="/post">Post</Link>
-          </li> */}
           <li>
             <Link to="/notifications">Notification</Link>
           </li>

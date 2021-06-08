@@ -16,6 +16,15 @@ const LoginHeader = styled.div`
   display: flex;
   justify-content: center;
 
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 90%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+  }
+
   .Login {
     width: 100%;
     margin-top: 20px;
@@ -37,6 +46,16 @@ const FormWrapper = styled.div`
     color: teal;
     text-align: center;
     text-decoration: none;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 80%;
+    }
+    @media only screen and (min-width: 768px) {
+      font-size: 90%;
+    }
+    @media only screen and (min-width: 992px) {
+      font-size: 100%;
+    }
   }
 `;
 const BoldLink = styled.a`
@@ -46,6 +65,16 @@ const BoldLink = styled.a`
   font-weight: bolder;
   color: teal;
   text-decoration: underline;
+
+  @media only screen and(min-width:468px) and (max-width: 600px) {
+    font-size: 85%;
+  }
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
+    font-size: 95%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    font-size: 100%;
+  }
 `;
 const FormItem = styled.div`
   width: 100%;

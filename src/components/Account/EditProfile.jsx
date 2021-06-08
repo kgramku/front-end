@@ -10,6 +10,10 @@ const FormWrapper = styled.div`
   border-radius: 15px;
   /* border: box-sizing; */
 
+  @media only screen and (max-width) {
+    max-width: 100%;
+  }
+
   .EditProfile {
     margin: 0 250px;
   }

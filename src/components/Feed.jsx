@@ -3,6 +3,10 @@ import styled from "styled-components";
 import Photo from "./../images/photo.jpg";
 import Avatar from "./../images/avatar.jpg";
 
+// html{
+//   font-size: 62.5%;
+// }
+
 const FeedWrapper = styled.div`
   display: flex;
   max-width: 700px;
@@ -13,7 +17,14 @@ const FeedWrapper = styled.div`
   border-radius: 15px;
   box-shadow: 0px 5px 7px #b3fadb;
   width: 100%;
-  height: 100px;
+  height: 110px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 const HeaderFeed = styled.div`
   display: flex;
@@ -36,6 +47,10 @@ const HeaderFeed = styled.div`
   }
   .feed_input {
     width: 500px;
+
+    @media only screen and (min-width: 0px) and (max-width: 600px) {
+      width: 100%;
+    }
   }
   button {
     display: none;
