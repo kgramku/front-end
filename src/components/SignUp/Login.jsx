@@ -16,6 +16,15 @@ const LoginHeader = styled.div`
   display: flex;
   justify-content: center;
 
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 90%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+  }
+
   .Login {
     width: 100%;
     margin-top: 20px;
@@ -27,16 +36,26 @@ const LoginHeader = styled.div`
 `;
 const FormWrapper = styled.div`
   .error {
-    color: #545a8f;
+    color: #ff4848;
   }
 
   .form-signup {
     margin-top: 50px;
     font-weight: bold;
     font-size: 18px;
-    color: #545a8f;
+    color: teal;
     text-align: center;
     text-decoration: none;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 80%;
+    }
+    @media only screen and (min-width: 768px) {
+      font-size: 90%;
+    }
+    @media only screen and (min-width: 992px) {
+      font-size: 100%;
+    }
   }
 `;
 const BoldLink = styled.a`
@@ -44,8 +63,18 @@ const BoldLink = styled.a`
   margin-top: 50px;
   font-size: 22px;
   font-weight: bolder;
-  color: #545a8f;
+  color: teal;
   text-decoration: underline;
+
+  @media only screen and(min-width:468px) and (max-width: 600px) {
+    font-size: 85%;
+  }
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
+    font-size: 95%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    font-size: 100%;
+  }
 `;
 const FormItem = styled.div`
   width: 100%;
@@ -58,7 +87,7 @@ const FormItem = styled.div`
 
     height: 30px;
     border: none;
-    border-bottom: 1px solid #490dd4;
+    border-bottom: 1px solid #6ec6ba;
 
     &:focus {
       outline: none;
@@ -73,7 +102,7 @@ const FormButton = styled.div`
     margin-top: 10px;
     width: 100%;
     padding: 10px 0;
-    background: #545a8f;
+    background: teal;
     border: none;
     color: white;
 

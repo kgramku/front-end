@@ -16,16 +16,22 @@ const ImageWrapper = styled.img`
   margin: 10px;
 `;
 const CommentSection = styled.div`
+  width: 100%;
+  padding: 10px;
   input {
     outline-width: 0;
     border: none;
     padding: 5px 30px;
-    margin: 0 15px;
-    margin: 10px;
     border-radius: 999px;
-    background-color: #eeecec;
-    width: 550px;
+    box-sizing: border-box;
+    background-color: #9de4da;
+    width: 100%;
     height: 20px;
+    .cmt_input {
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
   }
 
   button {
@@ -50,6 +56,7 @@ const Comment = (profilePic) => {
 
           <CommentSection onSubmit={handleSubmit}>
             <input
+              className="cmt_input"
               placeholder="Write a comment"
               type="text"
               value={comment}

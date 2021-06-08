@@ -5,6 +5,9 @@ import Account from "components/Account/Profile";
 import HomeView from "views/HomeView";
 import MakePost from "views/MakePost";
 import LogOut from "components/Account/LogOut";
+import ChangePassword from "components/Account/ChangePassword";
+import EditProfile from "components/Account/EditProfile";
+import Profile from "components/Account/Profile";
 
 function AppRoutes({ children }) {
   return (
@@ -12,10 +15,13 @@ function AppRoutes({ children }) {
       {children}
       <Switch>
         <Route path="/" exact component={HomeView} />
-        <Route path="/post" component={MakePost} />
+        {/* <Route path="/post" component={MakePost} /> */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={SignUp} />
         <Route path="/account" component={Account} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/editprofile" component={EditProfile} />
+        <Route path="/changepassword" component={ChangePassword} />
         <Route path="/logout" component={LogOut} />
       </Switch>
     </BrowserRouter>
