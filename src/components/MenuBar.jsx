@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import { PopupItems } from "./PopupItems";
+import { BarItems } from "./BarItems";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const PopupList = styled.div`
-  width: 100px;
+const MenuList = styled.div`
+  width: 100%;
   position: absolute;
   right: 0;
-  top: 80px;
-  background: #9de4da;
+  top: 100px;
+  background: teal;
   border-radius: 15px;
-
   text-align: start;
+
+  @media (max-width: 600px) {
+    top: 90px;
+  }
+
   ul {
     list-style: none;
     padding: 0;
@@ -21,10 +25,10 @@ const PopupList = styled.div`
     /* background: lightgrey; */
 
     padding: 8px 10px;
-    font-size: 18px;
+    font-size: 22px;
 
     :hover {
-      background: #5ec7b9;
+      background: #08c5c5;
       cursor: pointer;
     }
   }
@@ -33,26 +37,26 @@ const PopupList = styled.div`
     display: none;
   }
   .dropdown-link {
+    /* display: block; */
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: black;
   }
 `;
 
-const Popup = () => {
+const MenuBar = () => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
-
   return (
     <div>
-      <PopupList>
+      <MenuList>
         <ul
           onClick={handleClick}
-          className={click ? "popup-menu clicked" : "popup-menu"}
+          className={click ? "menu-bar clicked" : "menu-bar"}
         >
-          {PopupItems.map((items, index) => {
+          {BarItems.map((items, index) => {
             return (
               <li key={index}>
                 <Link
@@ -66,9 +70,9 @@ const Popup = () => {
             );
           })}
         </ul>
-      </PopupList>
+      </MenuList>
     </div>
   );
 };
 
-export default Popup;
+export default MenuBar;

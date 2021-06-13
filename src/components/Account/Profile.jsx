@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Post from "components/Post";
-import Carousel from "react-elastic-carousel";
-import ImageSlider from "components/Account/ImageSlider";
-import { SliderData } from "./../../components/Account/SliderData";
+// import Carousel from "react-elastic-carousel";
+import Slider from "components/Account/ImageSlider";
+// import { SliderData } from "./../../components/Account/SliderData";
 
 const ProfileWrapper = styled.div`
   width: 100%;
@@ -67,12 +67,6 @@ const Photos = styled.div`
   border-radius: 15px;
   padding: 15px 0;
   box-shadow: 0px 5px 7px #b3fadb;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
 `;
 const Image = styled.img`
   width: 120px;
@@ -98,13 +92,6 @@ const PostDetail = styled.div`
 `;
 
 const Profile = ({ username }) => {
-  const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2 },
-    { width: 768, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 4 },
-  ];
-
   return (
     <div className="ProfileHeader">
       <ProfileWrapper>
@@ -137,35 +124,9 @@ const Profile = ({ username }) => {
       <PostInfo>
         <h3>Photos</h3>
         <Photos>
-          <Carousel breakPoints={breakPoints}>
-            <div className="image">
-              {/* <ImageSlider slides={SliderData} /> */}
-              <Image
-                src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07"
-                alt="user's added photo"
-              />
-              <Image
-                src="https://images.pexels.com/photos/7803857/pexels-photo-7803857.jpeg"
-                alt="user's added photo"
-              />
-              <Image
-                src="https://images.pexels.com/photos/7524474/pexels-photo-7524474.jpeg"
-                alt="user's added photo"
-              />
-              <Image
-                src="https://images.pexels.com/photos/7574923/pexels-photo-7574923.jpeg"
-                alt="user's added photo"
-              />
-              <Image
-                src="https://images.pexels.com/photos/3693914/pexels-photo-3693914.jpeg"
-                alt="user's added photo"
-              />
-              <Image
-                src="https://cdn.pixabay.com/photo/2017/08/21/19/00/alone-2666433__340.jpg"
-                alt="user's added photo"
-              />
-            </div>
-          </Carousel>
+          <div>
+            <Slider />
+          </div>
         </Photos>
         <PostDetail>
           <h3>Posts</h3>

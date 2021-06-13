@@ -2,6 +2,7 @@ import Navbar from "components/Navbar";
 // import SignUp from "components/SignUp/SignUp";
 // import Login from "components/SignUp/Login";
 import AppRoutes from "routes/AppRoutes";
+import MobileNavbar from "components/MobileNavbar";
 
 import { createGlobalStyle } from "styled-components";
 
@@ -18,6 +19,7 @@ function App() {
 			{/* <SignUp/> */}
 			<AppRoutes>
 				<Navbar />
+				<MobileNavbar/>
 			</AppRoutes>
 		
 		</div>

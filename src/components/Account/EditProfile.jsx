@@ -5,19 +5,49 @@ const FormWrapper = styled.div`
   display: flex;
   max-width: 700px;
   margin: 20px auto;
-
+  gap: 80px;
+  width: 100%;
   background: #6ec6ba;
   border-radius: 15px;
   /* border: box-sizing; */
 
-  @media only screen and (max-width) {
+  @media (max-width: 768px) {
+    max-width: 90%;
+    margin: 20px;
+    height: 40px;
+    gap: 150px;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
     max-width: 100%;
+    margin: 0;
+    background: none;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .EditProfile {
+  /* .EditProfile {
+    align-items: center;
     margin: 0 250px;
-  }
 
+    @media (max-width: 600px) {
+      align-items: center;
+    }
+  } */
+
+  .Profiledetail {
+    display: flex;
+    flex-direction: row;
+  }
+  .changeimg {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 600px) {
+      align-items: center;
+    }
+  }
   .Pp {
     display: none;
     margin: 10px;
@@ -25,6 +55,11 @@ const FormWrapper = styled.div`
 
   label {
     margin-top: 10px;
+    @media (max-width: 600px) {
+      margin-top: 0px;
+
+      font-size: 20px;
+    }
   }
   input {
     margin: 5px;
@@ -46,6 +81,10 @@ const FormWrapper = styled.div`
     color: teal;
     font-weight: bold;
 
+    @media (max-width: 600px) {
+      font-size: 20px;
+    }
+
     :hover {
       background-color: #9de4da;
       border-radius: 15px;
@@ -61,6 +100,10 @@ const UpdateChange = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px;
+
+  @media (max-width: 600px) {
+    /* margin: 0px; */
+  }
 `;
 const FormButton = styled.div`
   button {
@@ -88,17 +131,17 @@ const EditProfile = () => {
 
   return (
     <FormWrapper onSubmit={handleSubmit}>
-      <div className="EditProfile">
+      <div className="changeimg">
         <ImageWrapper
           src="https://media.istockphoto.com/vectors/woman-in-a-surgical-mask-vector-id1212979124?s=612x612"
           alt="ProfilePic"
         />
         <label>
-          <div className="changeProfile">
-            <input className="Pp" type="file" />
-            <p>Choose a Profile Pic</p>
-          </div>
+          <input className="Pp" type="file" />
+          <p>Choose a Profile Pic</p>
         </label>
+      </div>
+      <div className="profiledetail">
         <UpdateChange>
           <label>Username</label>
           <input
@@ -106,6 +149,8 @@ const EditProfile = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
+        </UpdateChange>
+        <UpdateChange>
           <label>Email</label>
           <input
             type="text"

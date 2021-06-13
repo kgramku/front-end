@@ -14,6 +14,10 @@ const FormWrapper = styled.form`
     font-size: 18px;
     color: teal;
     text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -37,6 +41,16 @@ const SignUpWrapper = styled.div`
     border: 2px solid lightgrey;
     border-radius: 15px;
     padding: 30px;
+
+    @media (max-width: 768px) {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      border: none;
+      width: 100%;
+    }
   }
 `;
 
@@ -51,12 +65,20 @@ const SignUpFormHeader = styled.div`
   overflow: hidden;
   align-items: center;
 
+  @media (max-width: 600px) {
+    text-align: justify;
+  }
+
   .style {
   }
 `;
 const FormItem = styled.div`
   width: 100%;
   margin: 10px 0;
+
+  @media (max-width: 786px) {
+    font-size: 22px;
+  }
 
   input {
     margin-top: 5px;
@@ -84,6 +106,10 @@ const FormButton = styled.div`
     color: white;
 
     font-weight: bold;
+
+    @media (max-width: 786px) {
+      font-size: 22px;
+    }
   }
 `;
 

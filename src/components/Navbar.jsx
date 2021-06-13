@@ -19,9 +19,8 @@ const NavbarWrapper = styled.nav`
 
   box-shadow: 0px 2px 6px lightgrey;
 
-  @media only screen and (min-width: 300px) and (max-width: 600px) {
-    height: 60px;
-    padding: 0px;
+  @media (max-width: 768px) {
+    display: none;
   }
 
   .logo {
@@ -39,26 +38,24 @@ const NavListWrapper = styled.ul`
   gap: 30px;
   font-size: 24px;
 
-  @media only screen and (min-width: 300px) and (max-width: 600px) {
-    gap: 10px;
-    font-size: 15px;
+  @media (max-width: 850px) {
+    gap: 25px;
+    font-size: 20px;
   }
 
-  /* .menu {
+  /* @media (min-width: 768px) {
     display: none;
-
-    image {
-      width: 40px;
-      height: 40px;
-      padding: 20px;
-    }
+    gap: 20px;
+    font-size: 15px;
   } */
-  /* @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 0.8rem;
+
+  /* @media (max-width: 500px) {
+    gap: 20px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 468px) {
+    display: none;
   } */
 
   li {
@@ -70,36 +67,18 @@ const NavListWrapper = styled.ul`
     }
   }
 `;
-const MenuBar = styled.div`
-  .menu {
-    display: flex;
-    @media screen and (max-width: 768px) {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-size: 1.8rem;
-    }
-
-    image {
-      width: 40px;
-      height: 40px;
-      padding: 20px;
-    }
-  }
-`;
 
 const Searchbar = styled.div`
   display: flex;
   gap: 30px;
   font-size: 22px;
   margin: 20px;
-
+  /* 
   @media only screen and (min-width: 300px) and (max-width: 600px) {
     gap: 10px;
     font-size: 12px;
     margin: 15px 5px 5px;
-  }
+  } */
 
   input {
     padding: 5px;
@@ -108,19 +87,10 @@ const Searchbar = styled.div`
     border-radius: 999px;
     background-color: white;
     box-sizing: border-box;
-
-    @media only screen and (min-width: 300px) and (max-width: 600px) {
-      padding: 1px;
-    }
   }
 `;
 
 const Navbar = () => {
-  // const history = useHistory("");
-
-  // const logout = () => {
-  //   history.push("/signup");
-  // };
   const [dropdown, setDropdown] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -162,11 +132,10 @@ const Navbar = () => {
       </Searchbar>
       <div className="links">
         <NavListWrapper>
-          {/* <MenuBar>
-            <div className="menu" onclick={onClick}>
-              <image src={Menu} alt="MENU" />
-            </div>
-          </MenuBar> */}
+          <div className="menu">
+            <image src={Menu} alt="MENU" />
+          </div>
+
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -185,9 +154,6 @@ const Navbar = () => {
 
             {dropdown && <Dropdown />}
           </li>
-          {/* <li>
-            <Link to="/logout">LogOut</Link>
-          </li> */}
         </NavListWrapper>
       </div>
     </NavbarWrapper>

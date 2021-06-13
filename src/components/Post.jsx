@@ -21,11 +21,11 @@ const PostWrapper = styled.div`
   width: 100%;
   height: 100%;
 
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-  }
-  @media only screen and (min-width: 600px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 90%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
   }
 `;
 const ImageWrapper = styled.img`
@@ -68,23 +68,10 @@ const Img = styled.img`
   width: 30px;
   padding: 10px 70px;
 
-  /* @media only screen and (max-width: 600px) {
-    width: 1.5%;
+  @media (max-width: 600px) {
+    width: 30px;
+    padding: 5px 40px;
   }
-
-  @media only screen and (min-width: 600px) {
-    width: 1%;
-  }
-
-  @media only screen and (min-width: 768px) {
-    width: 3%;
-  }
-  @media only screen and (min-width: 768px) {
-    width: 4%;
-  }
-  @media only screen and (min-width: 992px) {
-    width: 5%;
-  } */
 
   :hover {
     background-color: #9de4da;
@@ -92,10 +79,23 @@ const Img = styled.img`
   }
 `;
 const Images = styled.img`
-  margin: 40px 20px 30px 450px;
+  margin: 40px 20px 30px 400px;
   width: 30px;
   height: 30px;
   cursor: pointer;
+
+  @media (max-width: 650px) {
+    margin: 40px 20px 30px 200px;
+    width: 20px;
+  }
+  @media (max-width: 360px) {
+    margin: 40px 20px 30px 80px;
+    width: 20px;
+  }
+  @media (max-width: 375px) {
+    margin: 40px 20px 30px 100px;
+    width: 20px;
+  }
 
   :hover {
     background: #9de4da;
@@ -164,8 +164,8 @@ const Post = ({ profilePic, image, username, timestamp, message }) => {
             <p className="username">{username}</p>
             <p>{timestamp}Timestamp</p>
           </div>
-          {/* <Images src={ShowButton} onClick={onClick} />
-          {popup && <Popup />} */}
+          <Images src={ShowButton} onClick={onClick} />
+          {popup && <Popup />}
         </PostTopInfo>
         <PostBotton>
           <div className="postbtn">

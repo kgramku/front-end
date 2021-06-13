@@ -48,7 +48,7 @@ const HeaderFeed = styled.div`
   .feed_input {
     width: 500px;
 
-    @media only screen and (min-width: 0px) and (max-width: 600px) {
+    @media (max-width: 600px) {
       width: 100%;
     }
   }

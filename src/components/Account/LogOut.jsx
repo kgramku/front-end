@@ -9,3 +9,15 @@
 // };
 
 // export default LogOut;
+import React from "react";
+import Slider from "components/Account/ImageSlider";
+
+const LogOut = () => {
+  return (
+    <div>
+      <Slider />
+    </div>
+  );
+};
+
+export default LogOut;
