@@ -19,7 +19,7 @@ const NavbarWrapper = styled.nav`
 
   box-shadow: 0px 2px 6px lightgrey;
 
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     display: none;
   }
 

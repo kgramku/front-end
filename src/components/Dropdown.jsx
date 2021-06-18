@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -48,6 +47,30 @@ const Dropdown = () => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
+
+  const MenuItems = [
+    {
+      title: "Profile",
+      path: "/profile",
+      cName: "dropdown-link",
+    },
+    {
+      title: "Edit Profile",
+      path: "/editprofile",
+      cName: "dropdown-link",
+    },
+    {
+      title: "ChangePassword",
+      path: "/changepassword",
+      cName: "dropdown-link",
+    },
+    {
+      title: "LogOut",
+      path: "/logout",
+      cName: "dropdown-link",
+    },
+  ];
+
   return (
     <div>
       <DropdownList>

@@ -31,6 +31,7 @@ const PostWrapper = styled.div`
 const ImageWrapper = styled.img`
   display: flex;
   flex-direction: column;
+  /* position: absolute; */
   max-width: 50px;
 
   margin: 10px;
@@ -38,7 +39,6 @@ const ImageWrapper = styled.img`
 const PostTopInfo = styled.div`
   margin: 0 10px;
   display: flex;
-  position: relative;
 
   .username {
     font-size: 18px;
@@ -83,17 +83,25 @@ const Images = styled.img`
   width: 30px;
   height: 30px;
   cursor: pointer;
+  @media (max-width: 700px) {
+    margin: 40px 20px 30px 250px;
+    width: 20px;
+  }
 
   @media (max-width: 650px) {
     margin: 40px 20px 30px 200px;
     width: 20px;
   }
-  @media (max-width: 360px) {
-    margin: 40px 20px 30px 80px;
+  @media (max-width: 500px) {
+    margin: 40px 20px 30px 200px;
     width: 20px;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     margin: 40px 20px 30px 100px;
+    width: 20px;
+  }
+  @media (max-width: 360px) {
+    margin: 40px 20px 30px 80px;
     width: 20px;
   }
 

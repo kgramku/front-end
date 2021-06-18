@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "./../images/logo.jpg";
 import Menu from "./../images/menu.jpg";
@@ -27,7 +26,7 @@ const NavbarWrapper = styled.nav`
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 650px) {
     display: none;
   }
 `;

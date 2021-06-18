@@ -1,10 +1,10 @@
 export const PopupItems = [
   {
     title: "EditPost",
-    cName: "dropdown-link",
+    cName: "popup-link",
   },
   {
     title: "Delete",
-    cName: "dropdown-link",
+    cName: "popup-link",
   },
 ];

@@ -47,6 +47,7 @@ export default class ImageSlider extends Component {
     const Img = styled.img`
       display: flex;
       flex-direction: row;
+      position: relative;
       justify-content: space-between;
       width: 200px;
       height: 200px;

@@ -53,6 +53,7 @@ const PostInfo = styled.div`
   background-color: #35a797;
   border-radius: 15px;
   box-shadow: 0px 5px 7px #b3fadb;
+
   h3 {
     text-align: center;
     padding: 10px 0;
