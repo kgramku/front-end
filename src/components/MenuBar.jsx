@@ -56,6 +56,11 @@ const MenuBar = () => {
       cName: "dropdown-link",
     },
     {
+      title: "UserList",
+      path: "/userlist",
+      cName: "dropdown-link",
+    },
+    {
       title: "Notification",
       path: "/notification",
       cName: "dropdown-link",

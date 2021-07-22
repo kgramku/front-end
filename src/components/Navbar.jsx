@@ -140,6 +140,9 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
+            <Link to="/explore">Users</Link>
+          </li>
+          <li>
             <Link to="/notifications">Notification</Link>
           </li>
           <li>

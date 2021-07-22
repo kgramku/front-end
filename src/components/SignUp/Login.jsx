@@ -171,7 +171,7 @@ const Login = () => {
             </FormItem>
             {errors.password && <p className="error">{errors.password}</p>}
             <FormButton>
-              <button type="btnSubmit" className="btn">
+              <button type="Submit" className="btn">
                 LogIn
               </button>
             </FormButton>
