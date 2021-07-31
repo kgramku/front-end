@@ -6,6 +6,8 @@ import Share from "./../images/share.jpg";
 import ShowButton from "./../images/showbutton.jpg";
 import Popup from "./Popup";
 import CommentSection from "components/Comment";
+import CommentList from "components/CommentList";
+
 // import CommentSection from "components/Comment";
 
 const PostWrapper = styled.div`
@@ -15,9 +17,9 @@ const PostWrapper = styled.div`
   margin: auto;
   margin-top: 20px;
 
-  background-color: #6ec6ba;
+  background-color: #a79078;
   border-radius: 15px;
-  box-shadow: 0 5px 7px #b3fadb;
+  box-shadow: 0 5px 7px #bdb198;
   width: 100%;
   height: 100%;
 
@@ -195,32 +197,19 @@ const Post = ({ profilePic, image, username, timestamp, message }) => {
           </Botton>
         </div>
       </PostOption>
-      <div>
-        <CommentSection />
-        {/* <CommentSection
-          profilePic="https://media.istockphoto.com/vectors/woman-in-a-surgical-mask-vector-id1212979124?s=612x612"
-          comment="let's help eachother during this pandemic!!!"
-        /> */}
-        <CommentHeader>
-          <div className="comment">
-            <form>
-              <ImgWrap src={profilePic} alt="ProfilePic" />
-
-              {/* <CommentSection onSubmit={handleSubmit}>
-                <input
-                  placeholder="Write a comment"
-                  type="text"
-                  value={comment}
-                  onChange={(e) => setComment(e.target.value)}
-                />
-                <button onClick={handleSubmit} type="btnSubmit">
-                  Hidden submit
-                </button>
-              </CommentSection> */}
-            </form>
-          </div>
-        </CommentHeader>
-      </div>
+      <CommentSection />
+      <CommentList
+        profilePic="https://media.istockphoto.com/vectors/woman-in-a-surgical-mask-vector-id1212979124?s=612x612"
+        username="Dia Manandhar"
+        timestamp="26/07/2021"
+        message="KU is hawa!!!!"
+      />
+      <CommentList
+        profilePic="https://media.istockphoto.com/vectors/woman-in-a-surgical-mask-vector-id1212979124?s=612x612"
+        username="jpt"
+        timestamp="27/07/2021"
+        message="KU gives nachainey tension!!!!"
+      />
     </PostWrapper>
   );
 };

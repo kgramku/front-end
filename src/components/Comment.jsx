@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const CommentHeader = styled.div`
   border-top: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
   form {
     flex: 1;
     display: flex;
@@ -24,7 +25,7 @@ const CommentSection = styled.div`
     padding: 5px 30px;
     border-radius: 999px;
     box-sizing: border-box;
-    background-color: #9de4da;
+    background-color: #bdb198;
     width: 100%;
     height: 20px;
     .cmt_input {

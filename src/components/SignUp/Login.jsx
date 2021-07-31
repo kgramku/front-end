@@ -56,7 +56,7 @@ const FormWrapper = styled.div`
     margin-top: 50px;
     font-weight: bold;
     font-size: 18px;
-    color: teal;
+    color: #74655e;
     text-align: center;
     text-decoration: none;
 
@@ -75,7 +75,7 @@ const BoldLink = styled.a`
   margin-top: 50px;
   font-size: 22px;
   font-weight: bolder;
-  color: teal;
+  color: #b65e35;
   text-decoration: underline;
 `;
 const FormItem = styled.div`
@@ -89,7 +89,7 @@ const FormItem = styled.div`
 
     height: 30px;
     border: none;
-    border-bottom: 1px solid #6ec6ba;
+    border-bottom: 1px solid #bdb19a;
 
     &:focus {
       outline: none;
@@ -104,7 +104,7 @@ const FormButton = styled.div`
     margin-top: 10px;
     width: 100%;
     padding: 10px 0;
-    background: teal;
+    background: #74655e;
     border: none;
     color: white;
 

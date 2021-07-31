@@ -14,7 +14,7 @@ const ListWrapper = styled.div`
 
   padding: 10px;
 
-  background-color: #6ec6ba;
+  background-color: #a79078;
   border-radius: 15px;
   width: 100%;
   height: 100%;
@@ -39,7 +39,7 @@ const FollowBotton = styled.button`
   margin-left: 10px;
   width: 120px;
   padding: 10px 0;
-  background: teal;
+  background: #74654e;
   border: none;
   color: white;
 

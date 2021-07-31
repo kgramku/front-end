@@ -25,6 +25,7 @@ const MenuList = styled.div`
 
     padding: 8px 10px;
     font-size: 22px;
+    z-index: 10;
 
     :hover {
       background: #08c5c5;

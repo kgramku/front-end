@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Post from "components/Post";
 // import Carousel from "react-elastic-carousel";
 import Slider from "components/Account/ImageSlider";
+import Comment from "components/Comment";
 // import { SliderData } from "./../../components/Account/SliderData";
 
 const ProfileWrapper = styled.div`
@@ -50,7 +51,7 @@ const PostInfo = styled.div`
   max-width: 700px;
   margin: 0 auto;
 
-  background-color: #35a797;
+  background-color: #74655e;
   border-radius: 15px;
   box-shadow: 0px 5px 7px #b3fadb;
 
@@ -138,6 +139,7 @@ const Profile = ({ username }) => {
             username="Diya Manandhar"
             image="https://media.istockphoto.com/vectors/novel-coronavirus-people-in-white-medical-face-mask-concept-of-vector-id1202707966?k=6&m=1202707966&s=612x612&w=0&h=8GsjwoTtiANnD2WMlLUJNiIg65kO4nPVyQCPqcXUMvo="
           />
+
           <Post
             profilePic="https://media.istockphoto.com/vectors/woman-in-a-surgical-mask-vector-id1212979124?s=612x612"
             message="This is to inform that the online class is further halted till May 21, 2021"

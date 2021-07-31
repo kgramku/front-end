@@ -13,9 +13,9 @@ const FeedWrapper = styled.div`
   margin: auto;
   margin-top: 20px;
   flex-direction: column;
-  background-color: #6ec6ba;
+  background-color: #a79078;
   border-radius: 15px;
-  box-shadow: 0px 5px 7px #b3fadb;
+  box-shadow: 0px 5px 7px #ebd3a8;
   width: 100%;
   height: 110px;
 
@@ -29,7 +29,7 @@ const FeedWrapper = styled.div`
 const HeaderFeed = styled.div`
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid #f8f3f3;
+  border-bottom: 2px solid #e9d5d5;
   padding: 15px;
 
   form {
@@ -43,7 +43,7 @@ const HeaderFeed = styled.div`
     padding: 5px 20px;
     margin: 0 15px;
     border-radius: 999px;
-    background-color: #9de4da;
+    background-color: #bdb198;
   }
   .feed_input {
     width: 500px;
@@ -69,7 +69,7 @@ const BottomFeed = styled.div`
   }
 
   :hover {
-    background-color: #9de4da;
+    background-color: #bdb19a;
     border-radius: 15px;
   }
 `;

@@ -12,7 +12,7 @@ const FormWrapper = styled.form`
     margin-top: 50px;
     font-weight: bold;
     font-size: 18px;
-    color: teal;
+    color: #a79078;
     text-align: center;
 
     @media (max-width: 768px) {
@@ -58,7 +58,7 @@ const SignUpFormHeader = styled.div`
   width: 100%;
   font-weight: bold;
   font-size: 20px;
-  color: teal;
+  color: #74655e;
 
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@ const FormItem = styled.div`
 
     height: 30px;
     border: none;
-    border-bottom: 1px solid #6ec6ba;
+    border-bottom: 1px solid #bdb198;
 
     &:focus {
       outline: none;
@@ -101,7 +101,7 @@ const FormButton = styled.div`
     margin-top: 10px;
     width: 100%;
     padding: 10px 0;
-    background: teal;
+    background: #74655e;
     border: none;
     color: white;
 
@@ -116,7 +116,7 @@ const FormButton = styled.div`
 const BoldLink = styled.a`
   margin-top: 50px;
   font-size: 22px;
-  color: teal;
+  color: #e9a64f;
   font-weight: bolder;
   text-decoration: underline;
 `;

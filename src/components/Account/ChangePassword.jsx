@@ -9,7 +9,7 @@ const FormWrapper = styled.div`
   width: 100%;
   /* border: box-sizing; */
 
-  background: #6ec6ba;
+  background: #a79078;
   border-radius: 15px;
   align-items: center;
 
@@ -44,13 +44,13 @@ const FormWrapper = styled.div`
 
     height: 30px;
     border: none;
-    border-bottom: 2px solid #9de4da;
+    border-bottom: 2px solid #bdb198;
 
     @media (max-width: 600px) {
       width: 100%;
 
       border: none;
-      border-bottom: 2px solid #9de4da;
+      border-bottom: 2px solid #bdb198;
     }
     @media (max-width: 768px) {
       width: 100%;
@@ -62,7 +62,7 @@ const FormWrapper = styled.div`
   }
 `;
 
-const FormItem = styled.div`
+const FormItem = styled.form`
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -74,7 +74,7 @@ const FormButton = styled.div`
     margin: 20px;
     width: 100%;
     padding: 10px;
-    background: teal;
+    background: #74655e;
     border: none;
     color: white;
 

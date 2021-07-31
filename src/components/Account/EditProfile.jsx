@@ -7,7 +7,7 @@ const FormWrapper = styled.div`
   margin: 20px auto;
   gap: 80px;
   width: 100%;
-  background: #6ec6ba;
+  background: #a79078;
   border-radius: 15px;
   /* border: box-sizing; */
 
@@ -69,7 +69,7 @@ const FormWrapper = styled.div`
 
     height: 30px;
     border: none;
-    border-bottom: 2px solid #9de4da;
+    border-bottom: 2px solid #bdb19a;
 
     &:focus {
       outline: none;
@@ -78,7 +78,7 @@ const FormWrapper = styled.div`
 
   p {
     text-align: center;
-    color: teal;
+    color: #563d39;
     font-weight: bold;
 
     @media (max-width: 600px) {
@@ -86,7 +86,7 @@ const FormWrapper = styled.div`
     }
 
     :hover {
-      background-color: #9de4da;
+      background-color: #bdb19a;
       border-radius: 15px;
     }
   }
@@ -110,7 +110,7 @@ const FormButton = styled.div`
     margin: 10px;
     width: 100%;
     padding: 10px 0;
-    background: teal;
+    background: #74655e;
     border: none;
     color: white;
 
